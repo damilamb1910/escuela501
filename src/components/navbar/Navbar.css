@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00CFED;
+    color: #FFF;
+  }
+  
+  .navbar-logo img {
+    height: 50px;
+    filter: drop-shadow( 0px 0px 1px black);
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  .donate-button {
+    background-color: #007B99;
+    color: #FFF;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .donate-button:hover {
+    background-color: #005F73;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .donate-button {
+      margin-top: 10px;
+    }
+  }

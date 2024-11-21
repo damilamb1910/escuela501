@@ -1,0 +1,71 @@
+.how-to-help {
+    background-color: #007B99;
+    color: #FFF;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .how-to-help h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .how-to-help p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+  
+  .help-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .primary-button {
+    background-color: #00CFED;
+    color: #FFF;
+  }
+  
+  .secondary-button {
+    background-color: #FFF;
+    color: #007B99;
+    border: 2px solid #007B99;
+  }
+  
+  .primary-button:hover {
+    background-color: #00AACD;
+  }
+  
+  .secondary-button:hover {
+    background-color: #007B99;
+    color: #FFF;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .how-to-help h2 {
+      font-size: 1.8rem;
+    }
+  
+    .how-to-help p {
+      font-size: 1rem;
+    }
+  
+    .primary-button,
+    .secondary-button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
