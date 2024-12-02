@@ -1,57 +1,84 @@
+/* src/components/Navbar.css */
+
+/* Estilo general del navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #00CFED;
-    color: #FFF;
-  }
-  
-  .navbar-logo img {
-    height: 50px;
-    filter: drop-shadow( 0px 0px 1px black);
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #e5f4f7, #007B99);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 50px; /* Ajusta según el tamaño del logo */
+  width: auto;
+}
+
+/* Links del navbar */
+.navbar-links {
+  display: flex; /* Visible por defecto en desktop */
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #FFF; /* Color blanco para los enlaces */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #007B99; /* Color al pasar el mouse */
+}
+
+/* Botón de menú hamburguesa */
+.navbar-toggle {
+  display: none; /* Oculto en pantallas grandes */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFF;
+  border-radius: 2px;
+  transition: transform 0.3s;
+}
+
+/* Estilo mobile */
+@media (max-width: 768px) {
   .navbar-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .navbar-links li a {
-    text-decoration: none;
-    color: #FFF;
-    font-weight: bold;
-  }
-  
-  .donate-button {
+    display: none; /* Oculto por defecto en mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
     background-color: #007B99;
-    color: #FFF;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .donate-button:hover {
-    background-color: #005F73;
+
+  .navbar-links.open {
+    display: flex; /* Visible cuando se despliega */
   }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .navbar-links {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-  
-    .donate-button {
-      margin-top: 10px;
-    }
+
+  .navbar-toggle {
+    display: flex; /* Botón hamburguesa visible */
   }
+}
